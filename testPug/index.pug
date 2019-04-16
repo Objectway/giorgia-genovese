@@ -1,0 +1,65 @@
+mixin datalist(name,surname)
+    tr  
+        td= name
+        td=surname
+doctype html
+html
+    head
+        title My Pug
+    body
+        div 
+            h1 My PUG
+            fieldset 
+                legend Anagrafe               
+                div
+                    br
+                    label Name
+                        input(type="text")  
+                            
+                    label Surname
+                        input(type="text")
+                    br    
+                    label Gender  
+                        br    
+                        label male
+                            input(
+                            type='checkbox'                                
+                            )
+                        label female
+                            input(
+                            type='checkbox'                               
+                        ) 
+                    br                           
+                    label city
+                        select
+                            option(value="TO") TO
+                            option(value="MI") MI
+            br                    
+            fieldset           
+                legend Utenza                
+                div
+                    br
+                    label Username
+                        input(type="text")
+                    br       
+                    label Password
+                        input(type="password")
+                    br        
+                    label Password
+                        input(type="password")
+                    br       
+                    label email
+                        input(type="email")
+            br
+            fieldset
+                legend Note
+                div
+                    br
+                    textarea(id="text")
+                    br
+                    button(type="submit") submit
+                    button(type="reset") reset
+
+                        
+
+                

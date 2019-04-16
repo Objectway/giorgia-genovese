@@ -10,19 +10,20 @@
                 <br/><br/>
                 <div>
                     <label for="nameForm">Name</label> <br/>
-                    <input id="nameForm" type="text" name="name"/>
+                    <input id="nameForm" type="text" name="name" placeholder="Name"/>
                     <br/><br/>
                     <label for="surnameForm">Surname</label> <br/>
                     <input id="surnameForm" type="text" name="surname"/>
                     <br/><br/>
-                    <label for="gender">Gender</label> <br/>
+                    <label>Gender</label> <br/>
                     <label for="genderFormM">Male</label> 
                     <input id="genderFormM" type="radio" name="gender"/>
                     <label for="genderFormF">Female</label> 
                     <input id="genderFormF" type="radio" name="gender"/>                   
                     <br/><br/>
-                    <label for="city">City</label> <br/>
+                    <label for="city">City</label> <br/><br/>
                     <select>
+                        <option value="Null">--Select--</option>
                         <option value="Milano">Milano</option>
                         <option value="Torino">Torino</option>
                     </select>
@@ -45,13 +46,17 @@
                         <br/><br/>
                         <label for="email">email</label> <br/>
                         <input id="emailForm" type="email" name="email"/>
-                        <br/><br/>
-                        <textarea >Write something</textarea>
-                        <br/><br/>
-                        <button type="submit">Submit</button>
-                        <button type="reset">Reset</button>
-                </div>
-            </fieldset>           
+                        <br/><br/>                       
+                </div>               
+            </fieldset> 
+            <br/><br/>  
+            <fieldset>
+                <legend>NOTE</legend>
+                    <textarea placeholder="Write here" ></textarea>
+                    <br/><br/>
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+            </fieldset>        
         </form> 
     </body>
 </html>
