@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <h1>FORM</h1>
+        <form action="https://www.google.com/webhp?hl=it&sa=X&ved=0ahUKEwidtvquo9ThAhUJzKQKHSMcAcMQPAgD" method="POST" target="_black">
+            <fieldset>
+                <legend> ANAGRAFICA</legend>
+                <br/><br/>
+                <div>
+                    <label for="nameForm">Name</label> <br/>
+                    <input id="nameForm" type="text" name="name"/>
+                    <br/><br/>
+                    <label for="surnameForm">Surname</label> <br/>
+                    <input id="surnameForm" type="text" name="surname"/>
+                    <br/><br/>
+                    <label for="gender">Gender</label> <br/>
+                    <label for="genderFormM">Male</label> 
+                    <input id="genderFormM" type="radio" name="gender"/>
+                    <label for="genderFormF">Female</label> 
+                    <input id="genderFormF" type="radio" name="gender"/>                   
+                    <br/><br/>
+                    <label for="city">City</label> <br/>
+                    <select>
+                        <option value="Milano">Milano</option>
+                        <option value="Torino">Torino</option>
+                    </select>
+                    <br/><br/>                   
+                </div>                
+            </fieldset>
+            <br/><br/>
+            <fieldset>
+                <legend>UTENZA</legend>
+                <br/><br/>
+                <div>
+                        <label for="usernameForm">Username</label> <br/>
+                        <input id="usernameForm" type="text" name="username"/>
+                        <br/><br/>
+                        <label for="psw">Pasword</label> <br/>
+                        <input id="psw" type="password" name="psw"/>
+                        <br/><br/>
+                        <label for="psw2">Pasword</label> <br/>
+                        <input id="psw2" type="password" name="psw2"/>
+                        <br/><br/>
+                        <label for="email">email</label> <br/>
+                        <input id="emailForm" type="email" name="email"/>
+                        <br/><br/>
+                        <textarea >Write something</textarea>
+                        <br/><br/>
+                        <button type="submit">Submit</button>
+                        <button type="reset">Reset</button>
+                </div>
+            </fieldset>           
+        </form> 
+    </body>
+</html>
