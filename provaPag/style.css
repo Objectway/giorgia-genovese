@@ -1,0 +1,90 @@
+#sopra{
+    background-color: blueviolet;
+    color: black;
+    width: 100%;
+    
+    padding: 40px;
+}
+.logo{
+    position: fixed;
+    top: 0;
+    right: 100px;
+    padding:2em;
+}
+.menu{
+    background-color: yellow;
+    color: black;
+ 
+    height: 50px;
+    
+}
+.wrapperM{
+    float: left;
+    margin-right: 10px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+.sezione{
+    background-color: orange;
+    width: 70%;
+    height: 603px;
+    margin: 0;
+}
+.dueR{
+    
+    border: 10px;
+    border-color: orange;
+    width: 518px;
+    margin:0 10px;
+    padding: 20px;
+    height: 30px;
+    
+    
+}
+.sidebar{
+    background: green;
+    width: 28.59%;
+    height: 518px;
+    float: right;
+    text-align: center;
+    border: 10px;
+   border-style: solid;
+   border-color: black;
+    
+}
+.box{
+   background-color: red;
+   color: black; 
+   text-align: center;
+   height: 240px;
+   margin: 0;
+   border: 10px;
+   
+   border-style: solid;
+   border-color: orange;
+}
+.box2{
+    background-color: red;
+    color: black; 
+    width: 1008px;
+    height: 240px;
+    margin: 0;
+    float: right; 
+    text-align: center;
+    border: 10px;
+    border-left: 10px;
+    border-style: solid;
+    border-color: orange;
+}
+
+
+.sotto{
+    background-color: blue;
+    color: wheat;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+}
