@@ -1,0 +1,27 @@
+#divBox{
+    font-family: 'Oswald', sans-serif;
+font-family: 'Dokdo', cursive;
+    background: #00AFEC;
+    font-size: 20px;
+    border: #00AFEC solid 5px;
+    width:  342px;
+    height:  76px;
+    border-radius: 6px;
+    text-align: left;
+    display: block;
+    padding: 1opx ;
+    color: white;
+    position: absolute;
+    right: 0;
+    bottom: -76px;
+}
+span{
+    opacity: 0.7;
+}
+.relativeBox{
+    position: relative;
+    padding: 10px;
+    background: green;
+    width: 100px;
+
+}

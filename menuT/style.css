@@ -1,0 +1,44 @@
+.menuT{
+    background-color:grey;
+    width: 100px;
+    border-radius: 8px;
+    padding: 10px;
+    position: relative;
+    line-height: 10px;
+    font-family: Dokdo;
+    font-size: 25px;
+    float: right;
+}
+.menuTe{
+    background-color: white;
+    left: 0;
+    top: 45px;
+    width: 115px;
+    position: absolute;
+    display:none;
+    border: solid white;
+    border-radius: 8px;
+    font-family: Dokdo;
+    font-size: 0.5em;
+    
+}
+
+.menuT:hover{
+    color: white;
+}
+.menuT:hover .menuTe{
+    display: block;
+}
+a{
+    color: black;
+    text-align: left;
+}
+
+ul{
+    list-style-type: none;
+}
+li{
+    
+    margin: 13px;
+    text-align: left;
+}

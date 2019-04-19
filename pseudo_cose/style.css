@@ -1,0 +1,43 @@
+.flexBoxWrapper{
+        background-color: yellowgreen;
+        display:flex;
+        flex-direction: column;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;  
+    background-color: bisque;
+}
+.navigation{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    border-style: solid;
+    background: chocolate ;
+    justify-content: space-between;
+    height: 100px;
+    
+}
+.navigation a:first-child{
+    align-self: flex-end;
+}
+.mainContentWrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    background: green;
+    justify-content: space-between;
+}
+.sidebar{
+    background: greenyellow;
+    width: auto;
+    height: 1;;
+}
+.article{
+    background: brown;
+    width: 500px;
+    height: 1000px;
+    
+}

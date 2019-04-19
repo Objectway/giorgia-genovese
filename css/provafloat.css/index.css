@@ -1,0 +1,13 @@
+.box{
+    width: 300px;
+    height: 300px;
+    float: left;
+    background-color: black;
+    color: brown
+}
+.clear{
+    clear: both;
+}
+.padre{
+    width: 300px;
+}
