@@ -1,0 +1,17 @@
+{
+  "name": "package",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch_pug": "pug index.pug --watch",
+    "watch_scss":"sass --watch style:style",
+    "watch_all": "concurrently \"npm run watch_scss\" \" npm run watch_pug\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^4.1.0"
+  }
+}

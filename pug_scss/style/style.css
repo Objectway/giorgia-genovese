@@ -1,0 +1,165 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Open Sans", sans-serif;
+}
+
+.header {
+  color: white;
+  display: flex;
+  background-color: #030346;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+}
+
+.img1 {
+  background-color: blu;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-right: 30px;
+}
+
+.div1 {
+  display: flex;
+  flex-direction: row;
+  align-items: space-between;
+  justify-content: space-between;
+  margin: 20px 0;
+  width: 76%;
+}
+
+.div2 {
+  display: flex;
+  flex-direction: column;
+  width: 36em;
+}
+
+.div_box {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.aa {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+.hh {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+h1 {
+  margin: 13px 8px;
+}
+
+.icon {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 63px;
+  justify-content: space-between;
+}
+
+.middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Open Sans", sans-serif;
+  width: 76%;
+  margin: 0 auto;
+}
+
+.corpo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #030346;
+  border-style: solid;
+  border-top: 2px;
+  border-left: 0;
+  border-right: 0;
+  margin: 15px;
+  padding: 20px 0;
+  border-color: #030346;
+  margin-left: 0px;
+}
+
+h3 {
+  margin: 15px;
+  padding: 20px 0 0;
+  margin-left: 0px;
+}
+
+.rettangoli {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 15px;
+  padding: 0 0 20px;
+  margin-left: 0px;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  box-shadow: 2px 2px #cccaca;
+  margin: 0 20px 0 0;
+}
+
+.box:first-child {
+  flex-grow: 2;
+}
+
+.box:last-child {
+  margin: 0;
+}
+
+.scrittaNd {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.scrittaN_box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+h2 {
+  margin: 0;
+}
+
+.scrittaB {
+  color: #030346;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  justify-items: left;
+}
+
+.scrittaE {
+  color: #928e8e;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  justify-items: left;
+}
+
+/*# sourceMappingURL=style.css.map */
