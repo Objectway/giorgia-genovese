@@ -9,13 +9,17 @@ mixin loopItems(items)
 - var icons = [{ "name":"", "icon": "search" }, { "name":"", "icon": "user"}, { "name":"", "icon": "eye" }, { "name":"", "icon": "bell" }]
 - var toolbarItems = [{ "name":"Segment Choice and Analytics", "icon": "check-circle" }, { "name":"Setup Main Parameters", "icon": "check-circle" }, { "name":"Strategies and Constraints", "icon": "check-circle" }, { "name":"Conversions", "icon": "check-circle" }, { "name":"Proposal", "icon": "check-circle" }]
 
+
 doctype html
+
 html
     head
         link(rel='stylesheet', href='href="https://fonts.googleapis.com/css?family=Open+Sans"')
         link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.8.1/css/all.css')
         link(rel='stylesheet', href='style/style.css')
+        script(src='script.js')
         title Robo Planning Preview
+        
     body
         .header
             .div_1
@@ -40,7 +44,9 @@ html
                     .scritta_n
                         p Retail clients north-east area
                         p 36,560 clients
-                        a(href='#') Show clients list 
+                        button(class="pop" onclick="myFunction()") show client
+                            div(class="pop_up")
+                                p(class="pop_scrivi")
             .div_form
                 .form_1
                     label(for='date') START DATE

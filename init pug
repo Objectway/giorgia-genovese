@@ -1,0 +1,40 @@
+cartella esercizio
+	cartella style	
+		style.scss
+	index.pug
+	cd esercizio
+	npm init ...
+	script: 2 script 
+		"pug":"pug --watch ndex.pug",
+		"scss":"scss -watch style:style"
+		"dev":"concurrently \"pug --watch ndex.pug\""
+	npm concurrently
+	npm run dev 
+
+SCSS:
+$column-width:76px;
+$margin:10px;
+.row{
+	width:1024px;
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+}
+@for $var from 1 to 12{
+	.col#{$var}{
+		width:($column-width*$var)+($margin*($var - 1));
+		height:100px;
+		background-color:red;
+		border;1px dolid #000;
+		margin:100px 0;
+		box-sizing:border-bbox;
+		display:flex;
+		flex-direction:column;
+	}
+}
+
+PUG:
+body
+	.row	
+		each val in [1,...,12]
+			div(class="`$col-${val}`")

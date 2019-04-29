@@ -1,0 +1,21 @@
+body {
+    /*font-size: 18px;*/
+    font-family: 'Times New Roman', Times, serif;
+    color: #444;
+    background: #fff;
+  }
+  
+.popupNo{
+  display:none;
+
+}
+.popupSi{
+  display:block;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  background-color: blue;
+  width: 300px;
+  height: 300px;
+}
