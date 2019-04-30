@@ -160,6 +160,10 @@ i {
   height: 90px;
 }
 
+.displaynone {
+  display: none;
+}
+
 .scritta_n {
   padding: 20px 0;
 }
@@ -172,7 +176,8 @@ i {
   color: #918888;
   margin-top: 0;
 }
-.scritta_n a {
+
+.pop {
   text-decoration: none;
   color: #030346;
 }

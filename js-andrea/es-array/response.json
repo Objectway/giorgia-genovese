@@ -1,0 +1,23 @@
+[
+    {
+        "id":1,
+        "name":"Andrea",
+        "cognome":"Rossi",
+        "genere":"Maschio",
+        "professione":"Dev"
+    },
+     {
+        "id":2,
+        "name":"Anna",
+        "cognome":"Rossino",
+        "genere":"Femmina",
+        "professione":"Maestra"
+     },
+     {
+        "id":3,
+        "name":"Anita",
+        "cognome":"Rosalba",
+        "genere":"Femmina",
+        "professione":"Cassiera"
+     }
+]

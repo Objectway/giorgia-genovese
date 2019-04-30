@@ -139,6 +139,9 @@ i{
     width: 117px;
     height: 90px;    
 }
+.displaynone{
+    display:none;
+}
 .scritta_n{
     p:first-child{
         color: black;
@@ -149,11 +152,12 @@ i{
         color: rgb(145, 136, 136);
         margin-top: 0;
     }
-    a{
-        text-decoration: none;
-        color:$blu_main;
-    }
+    
     padding:20px 0;
+}
+.pop{
+    text-decoration: none;
+    color:$blu_main;
 }
 .div_form{
     @include display_flex(row);

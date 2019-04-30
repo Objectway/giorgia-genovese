@@ -1,0 +1,5 @@
+.risposta{
+    display:flex;
+    direction: column;
+    justify-content: space-between;
+}
