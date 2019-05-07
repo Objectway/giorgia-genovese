@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>MoneyTracker</title>
+  <link rel="stylesheet" type="text/css" href="style/style.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+</head>
+
+<body>   
+    <div class=Wrapper>
+        <div class="amountForm">
+            <div class="amountForm__elements">
+                <div class="amountForm__elementsElement">
+                    <label class="amountForm__elementsElementLabel .label--currency" for="amount" >AMOUNT</label> <br/>
+                    <input class="amountForm__elementsElementInput" id="amount" type="numer" name="amount" placeholder="£"/> <br/>
+                </div>
+                <div class="amountForm__elementsElement">
+                    <label class="amountForm__elementsElementLabel" for="desc" >DESCRIPTION</label> <br/>           
+                    <input class="amountForm__elementsElementInput" id="desc" type="text" name="desc"/>           
+                </div>
+            </div>
+            
+            <button class="amountForm__elementButton" type="button">+</button>
+        </div>
+    </div>
+    <script src="//code.angularjs.org/snapshot/angular.min.js"></script>
+
+</body>
+
+</html>

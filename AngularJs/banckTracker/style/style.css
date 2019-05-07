@@ -1,0 +1,52 @@
+.Wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.amountForm {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 936px;
+  width: 100%;
+  margin: 0 auto;
+}
+.amountForm .amountForm__elements {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 70%;
+}
+.amountForm .amountForm__elements .amountForm__elementsElement {
+  display: flex;
+  flex-direction: column;
+}
+.amountForm .amountForm__elementButton {
+  display: flex;
+  flex-direction: column;
+  width: 70px;
+}
+
+@media (max-width: 900px) {
+  .amountForm {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .amountForm .amountForm__elements {
+    display: flex;
+    flex-direction: column;
+  }
+  .amountForm .amountForm__elements .amountForm__elementsElement {
+    display: flex;
+    flex-direction: column;
+  }
+  .amountForm .amountForm__elementButton {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

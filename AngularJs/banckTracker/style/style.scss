@@ -1,0 +1,43 @@
+@mixin display_flex($n){
+    display: flex;
+    flex-direction: $n;
+}
+.Wrapper{
+    @include display_flex(column);
+    width: 100%;
+    margin:0 auto;
+}
+.amountForm{
+    @include display_flex(row);
+    justify-content: space-between;
+    max-width: 936px;
+    width: 100%;
+    margin: 0 auto;
+    .amountForm__elements{
+        @include display_flex(row);
+        justify-content: space-between;
+        width: 70%;
+        .amountForm__elementsElement{
+        @include display_flex(column);
+        }
+    }  
+    .amountForm__elementButton{
+        @include display_flex(column);
+        width: 70px;
+    }    
+}
+@media (max-width:900px){
+    .amountForm{
+        @include display_flex(row);
+        justify-content: space-between;
+        .amountForm__elements{
+            @include display_flex(column);
+            .amountForm__elementsElement{
+                @include display_flex(column);   
+            }
+        }
+        .amountForm__elementButton{
+            @include display_flex(row);
+        }
+    }
+}
