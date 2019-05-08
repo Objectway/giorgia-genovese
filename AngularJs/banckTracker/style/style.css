@@ -29,6 +29,15 @@
   width: 70px;
 }
 
+.lista {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 936px;
+  width: 100%;
+  margin: 0 auto;
+}
+
 @media (max-width: 900px) {
   .amountForm {
     display: flex;

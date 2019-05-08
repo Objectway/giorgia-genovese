@@ -26,6 +26,19 @@
         width: 70px;
     }    
 }
+.lista{
+    @include display_flex(row);
+    justify-content: space-between;
+    max-width: 936px;
+    width: 100%;
+    margin: 0 auto;
+    .mtListItem{
+        .mtListItem__Date{
+
+        }
+    }
+    
+}
 @media (max-width:900px){
     .amountForm{
         @include display_flex(row);

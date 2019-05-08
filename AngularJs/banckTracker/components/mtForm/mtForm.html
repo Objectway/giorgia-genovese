@@ -1,0 +1,14 @@
+<div class="amountForm">
+        <div class="amountForm__elements">
+            <div class="amountForm__elementsElement">
+                <label class="amountForm__elementsElementLabel .label--currency" for="amount" >AMOUNT</label> <br/>
+                <input ng-model="amount" class="amountForm__elementsElementInput" id="amount" type="numer" name="amount" placeholder="£"/> <br/>
+            </div>
+            <div class="amountForm__elementsElement">
+                <label class="amountForm__elementsElementLabel" for="desc" >DESCRIPTION</label> <br/>           
+                <input ng-model="scritta" class="amountForm__elementsElementInput" id="desc" type="text" name="desc"/>           
+            </div>
+        </div> 
+        <p>{{amount}}</p>          
+        <button class="amountForm__elementButton" type="button" ng-click="$ctrl.addItem()" >+</button>
+    </div>
