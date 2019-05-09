@@ -8,14 +8,17 @@ myApp
         var ctrl=this;
         ctrl.lista=[
                 {
+                    isPositive:false,
                     amount:10,
                     scritta:'pranzo'
                 },
                 {
+                    isPositive:true,
                     amount:4,
-                    scritta:'caffe'
+                    scritta:'stipendio'
                 },
                 {
+                    isPositive:false,
                     amount:22,
                     scritta:'metro'
                 }

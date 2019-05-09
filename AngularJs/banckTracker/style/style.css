@@ -5,7 +5,26 @@
   margin: 0 auto;
 }
 
-.amountForm {
+/*.amountForm{
+    @include display_flex(row);
+    justify-content: space-between;
+    max-width: 936px;
+    width: 100%;
+    margin: 0 auto;
+    .amountForm__elements{
+        @include display_flex(row);
+        justify-content: space-between;
+        width: 70%;
+        .amountForm__elementsElement{
+        @include display_flex(column);
+        }
+    }  
+    .amountForm__elementButton{
+        @include display_flex(column);
+        width: 70px;
+    }    
+}*/
+.mtFormTransaction {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -13,20 +32,36 @@
   width: 100%;
   margin: 0 auto;
 }
-.amountForm .amountForm__elements {
+.mtFormTransaction .amountForm__elements {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 70%;
 }
-.amountForm .amountForm__elements .amountForm__elementsElement {
+.mtFormTransaction .amountForm__elements .amountForm__elementsElement {
   display: flex;
   flex-direction: column;
 }
-.amountForm .amountForm__elementButton {
+.mtFormTransaction .amountForm__elementButton {
   display: flex;
   flex-direction: column;
   width: 70px;
+}
+
+.mtFormTransactionpositive {
+  background-color: green;
+}
+
+.mtFormTransactionnegative {
+  background-color: red;
+}
+
+.mtListItemPositive {
+  background-color: green;
+}
+
+.mtListItemNegative {
+  background-color: red;
 }
 
 .lista {
@@ -37,7 +72,6 @@
   width: 100%;
   margin: 0 auto;
 }
-
 @media (max-width: 900px) {
   .amountForm {
     display: flex;

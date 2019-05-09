@@ -7,7 +7,7 @@
     width: 100%;
     margin:0 auto;
 }
-.amountForm{
+/*.amountForm{
     @include display_flex(row);
     justify-content: space-between;
     max-width: 936px;
@@ -25,6 +25,37 @@
         @include display_flex(column);
         width: 70px;
     }    
+}*/
+.mtFormTransaction{
+    @include display_flex(row);
+    justify-content: space-between;
+    max-width: 936px;
+    width: 100%;
+    margin: 0 auto;
+    .amountForm__elements{
+        @include display_flex(row);
+        justify-content: space-between;
+        width: 70%;
+        .amountForm__elementsElement{
+        @include display_flex(column);
+        }
+    }  
+    .amountForm__elementButton{
+        @include display_flex(column);
+        width: 70px;
+    } 
+}
+.mtFormTransactionpositive{
+    background-color: green;
+}
+.mtFormTransactionnegative{
+    background-color: red;
+}
+.mtListItemPositive{
+    background-color: green;
+}
+.mtListItemNegative{
+    background-color: red;
 }
 .lista{
     @include display_flex(row);

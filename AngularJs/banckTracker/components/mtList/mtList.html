@@ -2,11 +2,15 @@
     <div class="List__Title">{{mtListCtrl.title}}</div>
     <!--<button ng-click="$ctrl.faiCose()">fai cose</button>-->
     <div class="List__Elenco">
-        <mt-list-item ng-repeat="listaOggetto in mtListCtrl.lista track by $index" item-data="listaOggetto" item-index="$index">
-                
-        </mt-list-item>
+        <!--<mt-list-item ng-repeat="listaOggetto in mtListCtrl.lista track by $index" item-data="listaOggetto" item-index="$index">                
+        </mt-list-item>-->
         <!-- <div class="List__ElencoOggetto" ng-repeat="listaOggetto in mtListCtrl.lista"> -->
             <!-- {{listaOggetto.amount}} $ {{listaOggetto.scritta}} -->
         <!-- </div> -->
+        <a ng-repeat="id in mtListCtrl.listaIds" sref="detail({itemId:id})" >
+            <mt-list-item-id item-id="id"></mt-list-item-id>            
+        </a>
+        <div class="List__total">total: {{mtListCtrl.listaTot}}</div>
     </div>
+   
 </div>

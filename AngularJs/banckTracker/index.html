@@ -10,16 +10,25 @@
 <body > 
       <div class ="Traker">
           <div class=Wrapper ng-app='moneyTraker'>
-        <mt-traker></mt-traker>
-                     
+            <div class="Menu">
+              <a ui-sref='insert' ui-sref-active="Menu__Item--actvive" class="Menu__item"> insert</a>
+              <a ui-sref='list' ui-sref-active="Menu__Item--actvive" class="Menu__item">list</a>
+            </div>
+            <ui-view></ui-view>
+            <!--<mt-form-transaction></mt-form-transaction>
+            <mt-list title="pippo" ></mt-list>     -->              
           </div>
-  </div>
-    
-
+      </div>
     <script src="//code.angularjs.org/snapshot/angular.min.js"></script>
+    <script src="//unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+    <script src='services/routes.js'></script>
     <script src='components/mtList/mtList.js'></script>
     <script src='components/mtListItem/mtListItem.js/'></script>
-    <script src='components/mtForm/mtForm.js'></script>
+    <script src='components/mtFormTransaction/mtFormTransaction.js'></script>
     <script src='components/mtTraker/mtTraker.js'></script>
-</body>
+    <script src='services/mtServiceList.js'></script>
+    <script src='components/mtListItemId/mtListItemId.js/'></script>
+
+
+  </body>
 </html>

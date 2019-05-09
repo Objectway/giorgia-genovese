@@ -1,0 +1,15 @@
+<div class="mtFormTransaction" ng-class="{'mtFormTransactionpositive':$ctrl.isPositive, 'mtFormTransactionnegative': !$ctrl.isPositive}">
+        <div class="amountForm__elements">
+                <div class="amountForm__elementsElement">
+                    <label class="amountForm__elementsElementLabel .label--currency" for="amount" >AMOUNT</label> <br/>
+                    <input ng-model="amount" class="amountForm__elementsElementInput" id="amount" type="numer" name="amount" placeholder="£"/> <br/>
+                    <button class="amountForm__elementButton" type="button" ng-click="$ctrl.isPositive=!$ctrl.isPositive" >-/+</button>
+    
+                </div>
+                <div class="amountForm__elementsElement">
+                    <label class="amountForm__elementsElementLabel" for="desc" >DESCRIPTION</label> <br/>           
+                    <input ng-model="scritta" class="amountForm__elementsElementInput" id="desc" type="text" name="desc"/>           
+                </div>
+            </div>        
+            <button class="amountForm__elementButton" type="button" ng-click="$ctrl.addItem()" >+</button>    
+</div>
