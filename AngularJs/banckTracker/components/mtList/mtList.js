@@ -3,12 +3,13 @@ let myApp=angular.module('moneyTraker',[]);
 myApp   
     .component('mtList',{
         bindings:{
-            title:'=' //variabile che si aggiorna nell'html
+            title:'=', //variabile che si aggiorna nell'html
+            lista:'='
         },
         controller : function($scope){
 
             var ctrl=this;
-            ctrl.lista=[
+            /*ctrl.lista=[
                 {
                     amount:10,
                     scritta:'pranzo'
@@ -21,7 +22,7 @@ myApp
                     amount:22,
                     scritta:'metro'
                 }
-            ];
+            ];*/
            /* ctrl.faiCose = function(){
                 ctrl.title='faccio faccio'
                 //alert('faccio');
