@@ -1,0 +1,49 @@
+
+    @mixin display_flex($n){
+        display: flex;
+        flex-direction: $n;
+    }
+    .Wrapper{
+        @include display_flex(column);
+        width: 100%;
+        margin:0 auto;
+    }
+    .ftInputForm{
+        @include display_flex(column);
+        justify-content: space-between;
+        max-width: 936px;
+        width: 100%;
+        margin: 0 auto;
+        .ftInputForm__Element{
+            @include display_flex(column);
+            justify-content: space-between;
+            width: 70%;
+            .ftInputForm__ElementTitleCheck{
+                @include display_flex(row);
+                justify-content: space-between;
+                width: 70%;
+            }
+            .ftInputForm__Punteggio{
+                @include display_flex(row);
+                justify-content: space-between;
+                width: 70%;
+            }
+        }
+    }
+    .ftList{
+        @include display_flex(column);
+        justify-content: space-between;
+        max-width: 936px;
+        width: 100%;
+        margin: 0 auto;
+        .ftListItem{
+            @include display_flex(column);
+            justify-content: space-between;
+            p{
+                background-color: aqua;
+            }
+        }
+    }
+.inputForm__ListItem--active{
+    background-color: red;
+}

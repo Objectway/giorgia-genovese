@@ -1,0 +1,56 @@
+.Wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.ftInputForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 936px;
+  width: 100%;
+  margin: 0 auto;
+}
+.ftInputForm .ftInputForm__Element {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 70%;
+}
+.ftInputForm .ftInputForm__Element .ftInputForm__ElementTitleCheck {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 70%;
+}
+.ftInputForm .ftInputForm__Element .ftInputForm__Punteggio {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 70%;
+}
+
+.ftList {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 936px;
+  width: 100%;
+  margin: 0 auto;
+}
+.ftList .ftListItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.ftList .ftListItem p {
+  background-color: aqua;
+}
+
+.inputForm__ListItem--active {
+  background-color: red;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,9 @@
+<div ng-init="filmSelezionato=null">
+   <div class="ftList" >
+        <div ng-repeat="listaOggetto in $ctrl.lista ">        
+        <ft-list-item item-data="listaOggetto"></ft-list-item>
+        </div> 
+        <ft-fil-detail></ft-fil-detail>
+        <ui-view></ui-view>
+</div>     
+</div>

@@ -1,0 +1,30 @@
+<div class="ftInputForm">
+    <div class="ftInputForm__Element">
+        <div class="ftInputForm__ElementTitleCheck">
+            <label class="ftInputForm__ElementTitleCheckLabel " for="title" >TITLE</label> <br/>
+            <input ng-model="$ctrl.title" class="ftInputForm__ElementTitleCheckInput" id="title" type="text"  /> <br/>
+            <button ng-if="$ctrl.title"
+                ng-click="$ctrl.search()">Search</button>
+        </div>
+        <div class="inputForm__List">
+            <ul>
+                <li class="inputForm__ListItem" 
+                ng-repeat="result in $ctrl.searchResult"
+                ng-click="$ctrl.selectedItem=result"
+                ng-class="{'inputForm__ListItem--active':result.imdbID==$ctrl.selectedItem.imdbID}">{{result.Title}}  {{result.Year}}</li>
+            </ul>
+        </div>
+        <input ng-model="$ctrl.visto"type="checkbox" name="see" value="see">VISTO? <br>
+    
+        <div class="ftInputForm__Punteggio" ng-if="$ctrl.visto">
+            <p>PUNTEGGIO: {{$ctrl.punteggio}}</p>
+            <label ng-repeat="punti in [1,2,3,4,5,6,7,8,9,10] ">
+                <span>{{punti}}</span>
+                <input ng-model="$ctrl.punteggio" type="radio" name ="punteggio" ng-value="punti"/>
+            </label>
+        </div>
+        <div class="inputFormSalva" ng-if="$ctrl.selectedItem">
+            <button ng-click="$ctrl.salva()">Salva</button>
+        </div>
+    </div>
+</div>

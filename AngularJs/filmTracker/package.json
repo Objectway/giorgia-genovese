@@ -1,0 +1,16 @@
+{
+  "name": "filmtracker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "routes.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch_scss": "sass --watch style:style",
+    "server": "http-server -a localhost -p 8080 -c-1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^0.11.1"
+  }
+}

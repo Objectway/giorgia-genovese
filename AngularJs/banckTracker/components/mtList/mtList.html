@@ -10,6 +10,7 @@
         <a ng-repeat="id in mtListCtrl.listaIds" sref="detail({itemId:id})" >
             <mt-list-item-id item-id="id"></mt-list-item-id>            
         </a>
+        <ui-view></ui-view>
         <div class="List__total">total: {{mtListCtrl.listaTot}}</div>
     </div>
    

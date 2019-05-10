@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>FilmTracker</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    </head>
+    <body>
+        <div class ="Tracker">
+            <div class=Wrapper ng-app='filmTracker'>
+                <ft-input-form></ft-input-form>
+                <ft-list lista="$ctrl.lista"></ft-list>
+                
+                <ui-view></ui-view>
+            </div>
+        </div>
+        <script src="//code.angularjs.org/snapshot/angular.min.js"></script>
+        <script src="//unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+        <script src='routes.js'></script>
+        <script src='services/ftServiceList.js'></script>
+        <link rel="stylesheet" type="text/css" href="style/style.css">
+        <script src='components/ftInputForm/ftInputForm.js'></script>
+        <script src='components/ftList/ftList.js'></script>
+        <script src='components/ftListItem/ftListItem.js'></script>
+        <script src='services/ftSearchFilm.js'></script>
+
+    </body>
+</html>
