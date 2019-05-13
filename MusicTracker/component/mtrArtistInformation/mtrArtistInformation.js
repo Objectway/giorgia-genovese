@@ -15,7 +15,7 @@ myApp
                     })
             }
             ctrl.$onInit= function(mtrSearchService){
-                getArtistData();
+                mtrSearchService.getArtistInformation(artistId);
 
             },
             ctrl.$doCheck=function(){
@@ -23,5 +23,5 @@ myApp
             }
 
         },
-        templateUrl:'component/mtrArtistInformation.html'
+        templateUrl:'component/mtrArtistInformation/mtrArtistInformation.html'
     })

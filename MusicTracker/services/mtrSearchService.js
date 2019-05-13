@@ -39,7 +39,5 @@ myApp
                             }) 
                     return deferred.promise;
             }
-        }
-          
-        
+        }      
 }])  
