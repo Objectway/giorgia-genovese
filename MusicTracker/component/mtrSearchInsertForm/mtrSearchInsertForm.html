@@ -9,7 +9,8 @@
                     <li class="mtrSearchInsertForm__ListItem" 
                     ng-repeat="result in $ctrl.searchResult"
                     ng-click="$ctrl.selectedItem=result"
-                    ng-class="{'mtrSearchInsertForm__ListItem">{{result}}</li>
+                    ng-class="{'mtrListItemSelect': result.collectionId==$ctrl.selectedItem.collectionId }"
+                    >{{result.artistName}}</li>
                 </ul>
             </div><div class="ftInputForm__Punteggio" >
                 <p>PUNTEGGIO: {{$ctrl.punteggio}}</p>
