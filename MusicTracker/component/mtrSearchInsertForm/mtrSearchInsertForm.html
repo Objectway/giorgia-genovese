@@ -1,0 +1,24 @@
+<div class="mtrSearchInsertForm">
+        <div class="mtrSearchInsertForm__Element">
+            <label class="mtrSearchInsertFormTitleLabel" for="title" >ALBUM</label> <br/>
+            <input ng-model="$ctrl.album" class="mtrManualInsertForm__ElementTitleImput" id="title" type="text"  /> <br/>
+            <button ng-click="$ctrl.search()">Search</button>
+        </div>
+        <div class="mtrSearchInsertForm">
+                <ul>
+                    <li class="mtrSearchInsertForm__ListItem" 
+                    ng-repeat="result in $ctrl.searchResult"
+                    ng-click="$ctrl.selectedItem=result"
+                    ng-class="{'mtrSearchInsertForm__ListItem">{{result}}</li>
+                </ul>
+            </div><div class="ftInputForm__Punteggio" >
+                <p>PUNTEGGIO: {{$ctrl.punteggio}}</p>
+                <label ng-repeat="punti in [1,2,3,4,5] ">
+                    <span>{{punti}}</span>
+                    <input ng-model="$ctrl.punteggio" type="radio" name ="punteggio" id="punteggio" ng-value="punti"/>
+                </label>
+            </div>
+        <div class="mtrManualInsertForm__Salva" >
+            <button ng-click="$ctrl.salva()">Salva</button>
+        </div>
+</div>
