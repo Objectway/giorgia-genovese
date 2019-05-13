@@ -1,0 +1,5 @@
+<div class="mtrManualList">
+        <div ng-repeat="listaOggetto in $ctrl.lista track by $index" ng-class="{'mtrListItemPari': $index%2!=0}" >   
+        {{listaOggetto.artista}}
+        </div>
+</div>

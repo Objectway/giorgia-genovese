@@ -1,22 +1,30 @@
 <div class="mtrManualInsertForm">
     <div class="mtrManualInsertForm__Element">
         <label class="mtrManualInsertForm__ElementArtistLabel">ARTISTA</label> <br/>
-        <input class="mtrManualInsertForm__ElementArtirstInput"  type="text"/> <br/>
+        <input ng-model="artista" class="mtrManualInsertForm__ElementArtirstInput" name="artista" id="artista"type="text"/> <br/>
         <label class="mtrManualInsertForm__ElementAlbumLabel">ALBUM</label> <br/>
-        <input class="mtrManualInsertForm__ElementAlbumInput"  type="text"/> <br/>
+        <input ng-model="album" class="mtrManualInsertForm__ElementAlbumInput" name="album" id="album" type="text"/> <br/>
         <label class="mtrManualInsertForm__ElementTracceLabel">TRACCE</label> <br/>
-        <input class="mtrManualInsertForm__ElementTracceInput"  type="number"/> <br/>
+        <input ng-model="tracce" class="mtrManualInsertForm__ElementTracceInput" name="tracce" id="tracce" type="number"/> <br/>
         <label class="mtrManualInsertForm__ElementPrezzoLabel">PREZZO</label> <br/>
-        <input class="mtrManualInsertForm__ElementPrezzoInput"  type="number"/> <br/>       
+        <input ng-model="prezzo" class="mtrManualInsertForm__ElementPrezzoInput" name="prezzo" id="prezzo" type="number"/> <br/>       
+        Default formatting: <span id='number-default'>{{prezzo | number:2}}</span><br>
     </div>
-    <div class="mtrManualInsertForm__Punteggio" >
+ <!--   <div class="mtrManualInsertForm__Punteggio" >
         <p>PUNTEGGIO</p>
             <input ng-model="$ctrl.punteggio" type="radio" name ="punteggio" ng-value="1"/>1
             <input ng-model="$ctrl.punteggio" type="radio" name ="punteggio" ng-value="2"/>2
             <input ng-model="$ctrl.punteggio" type="radio" name ="punteggio" ng-value="3"/>3
             <input ng-model="$ctrl.punteggio" type="radio" name ="punteggio" ng-value="4"/>4
             <input ng-model="$ctrl.punteggio" type="radio" name ="punteggio" ng-value="5"/>5        
-    </div>
+    </div>-->
+    <div class="ftInputForm__Punteggio" >
+            <p>PUNTEGGIO: {{$ctrl.punteggio}}</p>
+            <label ng-repeat="punti in [1,2,3,4,5] ">
+                <span>{{punti}}</span>
+                <input ng-model="$ctrl.punteggio" type="radio" name ="punteggio" id="punteggio" ng-value="punti"/>
+            </label>
+        </div>
     <div class="mtrManualInsertForm__Salva" >
         <button ng-click="$ctrl.salva()">Salva</button>
     </div>

@@ -9,6 +9,7 @@
         <div class="Tracker">
             <div class="Wrapper" ng-app='musicTracker'>
                 <mtr-manual-insert-form></mtr-manual-insert-form>
+                <mtr-manual-list lista="$ctrl.lista"></mtr-manual-list>
                 <ui-view></ui-view>
             </div>
         </div>
@@ -16,6 +17,9 @@
         <script src="//unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
         <link rel="stylesheet" type="text/css" href="style/style.css">
         <script src='app.js'></script>
+        <script src='services/mtrServiceList.js'></script>
         <script src='component/mtrManualInsertForm/mtrManualInsertForm.js'></script>
+        <script src='component/mtrManualList/mtrManualList.js'></script>
+        
     </body>
 </html>
