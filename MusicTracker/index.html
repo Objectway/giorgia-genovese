@@ -8,10 +8,14 @@
     <body>
         <div class="Tracker">
             <div class="Wrapper" ng-app='musicTracker'>
+                <div class="Menu" >
+                    <a ui-sref='aggiungi' ui-sref-active="Menu__Item--actvive" class="Menu__item"> aggiungi</a>
+                    <a ui-sref='list' ui-sref-active="Menu__Item--actvive" class="Menu__item">list</a>
+                </div>
               <!-- <mtr-manual-insert-form></mtr-manual-insert-form>
-                <mtr-manual-list lista="$ctrl.lista"></mtr-manual-list>--> 
-                <mtr-search-insert-form></mtr-search-insert-form>
                 <mtr-manual-list lista="$ctrl.lista"></mtr-manual-list>
+                <mtr-search-insert-form></mtr-search-insert-form>
+                <mtr-manual-list lista="$ctrl.lista"></mtr-manual-list>--> 
                 
                 <ui-view></ui-view>
             </div>
