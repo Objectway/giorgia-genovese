@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>MusicTracker</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">       
+    </head>
+    <body>
+        <div class="Tracker">
+            <div class="Wrapper" ng-app='musicTracker'>
+                <mtr-manual-insert-form></mtr-manual-insert-form>
+                <ui-view></ui-view>
+            </div>
+        </div>
+        <script src="//code.angularjs.org/snapshot/angular.min.js"></script>
+        <script src="//unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="style/style.css">
+        <script src='app.js'></script>
+        <script src='component/mtrManualInsertForm/mtrManualInsertForm.js'></script>
+    </body>
+</html>

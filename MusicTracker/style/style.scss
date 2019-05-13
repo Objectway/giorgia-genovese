@@ -1,0 +1,9 @@
+@mixin display_flex($n){
+    display: flex;
+    flex-direction: $n;
+}
+.Wrapper{
+    @include display_flex(column);
+    width: 100%;
+    margin:0 auto;
+}

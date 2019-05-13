@@ -1,0 +1,23 @@
+<div class="mtrManualInsertForm">
+    <div class="mtrManualInsertForm__Element">
+        <label class="mtrManualInsertForm__ElementArtistLabel">ARTISTA</label> <br/>
+        <input class="mtrManualInsertForm__ElementArtirstInput"  type="text"/> <br/>
+        <label class="mtrManualInsertForm__ElementAlbumLabel">ALBUM</label> <br/>
+        <input class="mtrManualInsertForm__ElementAlbumInput"  type="text"/> <br/>
+        <label class="mtrManualInsertForm__ElementTracceLabel">TRACCE</label> <br/>
+        <input class="mtrManualInsertForm__ElementTracceInput"  type="number"/> <br/>
+        <label class="mtrManualInsertForm__ElementPrezzoLabel">PREZZO</label> <br/>
+        <input class="mtrManualInsertForm__ElementPrezzoInput"  type="number"/> <br/>       
+    </div>
+    <div class="mtrManualInsertForm__Punteggio" >
+        <p>PUNTEGGIO</p>
+            <input ng-model="$ctrl.punteggio" type="radio" name ="punteggio" ng-value="1"/>1
+            <input ng-model="$ctrl.punteggio" type="radio" name ="punteggio" ng-value="2"/>2
+            <input ng-model="$ctrl.punteggio" type="radio" name ="punteggio" ng-value="3"/>3
+            <input ng-model="$ctrl.punteggio" type="radio" name ="punteggio" ng-value="4"/>4
+            <input ng-model="$ctrl.punteggio" type="radio" name ="punteggio" ng-value="5"/>5        
+    </div>
+    <div class="mtrManualInsertForm__Salva" >
+        <button ng-click="$ctrl.salva()">Salva</button>
+    </div>
+</div>
