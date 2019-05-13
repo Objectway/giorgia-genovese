@@ -10,6 +10,11 @@ myApp.config(function($stateProvider){
             name:'list',
             url: '/list',
             component: 'mtrManualList'
+        },
+        {
+            name:'detail',
+            url:'/list/{artistId}',
+            component: 'mtrArtistInformation'
         }      
     ];
     routes.forEach(r =>{
