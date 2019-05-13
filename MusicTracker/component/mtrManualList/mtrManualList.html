@@ -1,5 +1,6 @@
 <div class="mtrManualList">
         <div ng-repeat="listaOggetto in $ctrl.lista track by $index" ng-class="{'mtrListItemPari': $index%2!=0}" >   
-        {{listaOggetto.artista}}
+        Artist:{{listaOggetto.artista}} Album:{{listaOggetto.album}} Price:{{listaOggetto.prezzo | number:2}} voto:
+        <mtr-ranking-star pun-teggio='listaOggetto.punteggio'></mtr-ranking-star>
         </div>
 </div>
