@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+.Button{
+    background-color: yellow;
+}
+.Button_film{
+    background-color: aqua;
+}
+.Home__filmListContainer{
+    display:flex;
+    flex-direction:  row;
+    flex-wrap: wrap;
+    .Home__film{
+        display:flex;
+    flex-direction:  column;
+    }
+
+}

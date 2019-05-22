@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 //import { HeroComponent } from './hero/hero.component';
 import { HeroModule } from './hero/hero.module';
 import { AppHighlightDirective } from './app-highlight.directive';
+import { HeroDetailsComponent } from './hero-details/hero-details.component';
+import { HeroComponent } from './hero/hero.component';
 
 @NgModule({
   declarations: [

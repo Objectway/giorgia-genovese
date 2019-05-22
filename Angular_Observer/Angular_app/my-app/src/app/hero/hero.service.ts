@@ -8,11 +8,17 @@ export class HeroService {
 
   constructor() { }
 
-  makeObservable(){
-    return new RxJs.Observable((observer)=>{
-      observer.next();
+  getHero(){
+    return new Observable((observer)=>{
+      observer.next([
+        {
+          id:1,
+          name:'mario'} ,
+          {
+            id:2,
+            name:'maria'}   
+      ]);
       observer.complete();
-      observer.error();    
-    })
+    });
   }
 }

@@ -6,3 +6,4 @@
 <p *ngIf="enableParagraph">
  esisto spòp seè true
 </p>
+<div *ngFor="let hero of heroList" (click)="goToDetail(hero.id)">{{hero.name}}</div>

@@ -19,7 +19,14 @@
 </ul>
 
 
-<input [(ngModel)]= "heroName">
+
+<!--<app-hero [heroName]="heroName" [enableParagraph]="enableParagraph" (customEvent)="customEventCallback($event)"></app-hero>
+
 <app-hero [heroName]="heroName" [enableParagraph]="enableParagraph" (customEvent)="customEventCallback($event)"></app-hero>
+<input [(ngModel)]= "heroName">
+-->
+<a routerLink="/"> base </a>
+<a routerLink="/heroes"> Heroes </a>
+<!--<a routerLink="/heroes"> Heroes </a>-->
 <router-outlet></router-outlet>
    

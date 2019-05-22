@@ -1,0 +1,8 @@
+<a (click)="goBack()"> GO BACK TO LIST</a>
+<div *ngIf="!!filmDetail">
+    <img [src]="filmDetail.Poster"/>
+    <div >{{filmDetail.Title}}</div>
+    <div >{{filmDetail.Year}}</div>
+    <div >{{filmDetail.Plot}}</div>
+    <app-button [film]="filmDetail" [disableDetailsButton]="true"></app-button>
+</div>

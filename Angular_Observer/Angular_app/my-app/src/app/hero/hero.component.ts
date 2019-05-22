@@ -10,7 +10,9 @@ SimpleChanges,
 Output,
 EventEmitter
 } from '@angular/core';
-
+import { HeroService } from './hero.service';
+import { Hero } from './hero';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-hero',
@@ -23,8 +25,12 @@ export class HeroComponent implements OnInit,OnChanges,AfterContentChecked,After
   @Input() heroName:string;
   @Output()customEvent:EventEmitter<string>= new EventEmitter();
   @Input() enableParagraph:boolean;
-  constructor() { }
+  private heroList: Hero[];
+  constructor(private heroService: HeroService, private router: Router) { }
   
+  goToDetail(id){
+    this.router.navigate(['/heroes',id]);
+  }
   kickHero(){
     this.customEvent.emit(` mamma mia ${this.heroName}`);
   }
@@ -50,6 +56,9 @@ export class HeroComponent implements OnInit,OnChanges,AfterContentChecked,After
     console.log("destory")
   }
   ngOnInit() {
+    this.heroService.getHero().subscribe((response:Hero[])=>{
+      this.heroList=response;
+    });
   }
 
 }
