@@ -2,7 +2,6 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Home from './views/Home.vue';
 import PopUpAlert from './components/PopUpAlert.vue'
-import Colore from '.components/Colore.vue'
 Vue.use(Router);
 
 export default new Router({
@@ -11,10 +10,7 @@ export default new Router({
       path: '/',
       name: 'home',
       component: Home,
-      children:[
-        {path: 'colore',
-        component:Colore }
-      ]
+      
     },
     {
       path: '/about',

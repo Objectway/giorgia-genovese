@@ -5,6 +5,7 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> | 
       <router-link to="/popUp">il pop che non va</router-link>
+      {{$store.state.name}}
     </div>
     <router-view/>
     
@@ -21,7 +22,7 @@ import PopUpAlert from './components/PopUpAlert.vue';
 })
 
 export default class App extends Vue{
-  public status!:string ='ciao';
+  public status:string ='ciao';
   public lista=['ettore','armando','carlo'];
 
   public showLista(data: string){
@@ -51,6 +52,14 @@ export default class App extends Vue{
       .then((response)=>{
         console.log(response.data)
       });
+
+      console.log(this.$store.getters.getFullName);
+      console.log(this.$store.getters.getFullNameReverse);
+      this.$store.commit('changeName', ' ciccio');
+      this.$store.dispatch('setNameAndSurname', {
+        name: 'Maria',
+        surname: 'Di Vietri'
+      })
   } 
    
 }
