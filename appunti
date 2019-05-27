@@ -15,3 +15,51 @@ permette a tutti (event bus) di collegarsi allo stesso state. per far interagire
 	Getters: servono a prendere il valore e modificarlo. e farci piccola logica
 	
 	state: rappresenta tutta l'applicazione. se divido in moduli divido l'applicazione
+--------------------------------------------------------------------------------------------------
+
+git:
+-git scm
+-VIM: editor 
+-git tower per mac
+
+CVCS: un repository centrale e un clioent. non si aveva un repository in locale e devi sempre essere online. (SVM)
+DVCS: sitsema distribuito. (GIT) 
+
+git init "inizializzo una repository"
+git add -A // . ==>aggiungo tutto
+git commit 
+
+git touch: cambia data di creazione del file oppure crea un file.
+
+area di staging: area precedente alla commit.
+commito: 1fase: aggiungi file in area di staging
+	2fase:
+
+git clone: clona un repository https://my-url
+git rm --cached <nome file> toglie il file dalla staging area
+
+branch: diversi rami per sviluppare
+
+git checkout : mi distinguo tra i diversi branch
+
+HEAD~3: torno inietro alla 4rta commit
+
+detached head : è una zona sconosciuta, di nessuno
+
+git checkout . : resetta tutti i file allì'ultima versione conosciuta
+git clean -fd: pulisce tutte le cartelle
+git reset --hard HEAD: metodo violento per resettare tuttoù
+	git reset --hard remote/branch 
+	git reset --hard origin/master
+
+
+git pull: è un fetch che prende tutto quello che c'è in remoto e poi fa merge con il branch in cui sono
+
+git checkout branch
+git pull
+git merge other-branch
+
+git merge squash: salvavita, crea una sola commit della merge e la mette nella parte più alta del repository del brench.
+
+git config --global core.editor "vim"
+
