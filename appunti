@@ -1,0 +1,17 @@
+mock server:
+node-mock-server
+-interfaccia swagger
+-posso anche simulare l'errore
+-dipendenze di sviluppo: --dev
+Ma smettila
+
+vuex è un service. che4 ti memorizza le variabili a livello applicativo. Globale
+permette a tutti (event bus) di collegarsi allo stesso state. per far interagire tutti sullo stesso stato. non è persistente e quindi serve una base dati che conservi lo stato.
+
+	action: metodo contenuto in vuex, rappresenta una chiamata per cambiare uno stato. unico 		componente asincrono e chiama il BE.
+
+	mutation: viene chiamata quando va a buon fine la actioon. cambia lo stato.
+
+	Getters: servono a prendere il valore e modificarlo. e farci piccola logica
+	
+	state: rappresenta tutta l'applicazione. se divido in moduli divido l'applicazione

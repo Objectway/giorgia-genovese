@@ -1,0 +1,6 @@
+mock server:
+node-mock-server
+-interfaccia swagger
+-posso anche simulare l'errore
+-dipendenze di sviluppo: --dev
+Ma smettila
