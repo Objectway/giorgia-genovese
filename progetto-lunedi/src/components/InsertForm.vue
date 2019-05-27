@@ -1,11 +1,10 @@
 <template>
     <div class="insertForm">
         <input type="text" v-model='filmSearch'>
-        {{filmSearch}}
         <button v-on:click="SearchFilm(filmSearch)">search</button>
-        <div class="insertForm__Lista" v-for="item in resultFilm" :key="item.Title">
+        <div class="insertForm__Lista" v-for="item in resultFilm" :key="item.imdbID">
             <p>{{item.Title}}</p>
-            <img :src="item.Poster" @click="navigateToDetail" /> 
+            <img :src="item.Poster" @click="navigateToDetail(item.imdbID)" /> 
             <p>{{item.Year}}</p>
         </div>
     </div>
@@ -24,7 +23,6 @@ export default class InsertForm extends Vue{
      
     public filmSearch: string='';
     public resultFilm: any[]=[];
-    @Prop() detailFilm!:string;
 
     public SearchFilm(filmSearch){
         let endPoint: string='http://www.omdbapi.com/?apikey=51fb3d47&s='+filmSearch;
@@ -35,9 +33,9 @@ export default class InsertForm extends Vue{
             console.log(this.resultFilm)
         } )      
     }
-    public navigateToDetail(){
+    public navigateToDetail(id){
 
-        this.$router.push('/detail')
+        this.$router.push('/detail/'+id)
     }
     
     
