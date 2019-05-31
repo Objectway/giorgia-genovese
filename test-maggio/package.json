@@ -1,15 +1,19 @@
 {
-  "name": "test-trentuno-maggio",
+  "name": "test-maggio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "test:unit": "vue-cli-service test:unit"
+    "test:unit": "vue-cli-service test:unit",
+    "test": "jest --colors",
+    "test:watch": "jest --colors --watch",
+    "test:coverage": "jest --coverage"
   },
   "dependencies": {
     "core-js": "^2.6.5",
+    "jest": "^24.8.0",
     "lit-element": "^2.1.0",
     "vue": "^2.6.10",
     "vue-class-component": "^7.0.2",
@@ -28,7 +32,11 @@
     "node-sass": "^4.9.0",
     "sass-loader": "^7.1.0",
     "ts-jest": "^23.0.0",
+    "jest": "^24.8.0",
     "typescript": "^3.4.3",
     "vue-template-compiler": "^2.6.10"
-  }
+  },
+  "browserslist": [
+    "last 2 Chrome versions"
+  ]
 }

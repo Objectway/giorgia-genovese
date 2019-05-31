@@ -1,4 +1,4 @@
-# test-trentuno-maggio
+# test-maggio
 
 ## Project setup
 ```
