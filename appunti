@@ -63,3 +63,108 @@ git merge squash: salvavita, crea una sola commit della merge e la mette nella p
 
 git config --global core.editor "vim"
 
+
+bundler: fa cose del task runner + crea il grafo delle differenze+ file di config
+task runner:riduce tutti i file in uno per tipo
+
+Middleware: manda l'interfaccia corretta.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+WEB COMPONENT: serve a utilizzare più componenti sviluppati in tecnologie diverse nella stessa pagina|| è uno standard
+
+VIRTUAL DOM E SHADOW DOM SONO DIVERSI!!
+	VIRTUAL DOM : (react) è una astrazione del dom in javascript. è una struttura adf albero che rappresenta lòa struttura deldom 
+
+
+WEB COMPONENT: costum element, nuovi elementi in HTML5, standard di w3c, ed estendono l'HTMl. ma se non è standard come faccio a validarlo e a metterlo nei browser?
+	-W3C ha imposto degli standard.
+	-non è come i component in angular. 
+	-attributi: (--mode=)
+		    --computed 
+		    --istanza
+	-una volta registrato il web component non si può togliere e se ne aggiungo uno la pagina si rompe. 
+	-un BOM e più DOM
+	     |
+	     |
+	     V
+	tutto ciò che riguarda il browser(NAVIGATOR__DOM__HISTORY)
+	-VUE: in main.ts -->$maunt: fa il boostrap dell'app
+	-possiamo incapsulare funzionalità nell'HTML
+	- <template>: utilizzo html
+		|-->l'immagine posso caricarla a runTime. perchè così posso riutilizzare il componente
+		|-->lavora direttamente nel DOMù
+		|--> non viene reindirizzato finchè nessuno lo utilizza
+	
+	- shadow dom: incapsulamento delle API 
+		|-->un DOM più SHADOW DOM 
+		|-->SHADOW ROOT: meta tag per farmi individuare dove inizia una SHADOW dom.
+			|-->ci possono essere più livelli
+		|-->markup incapsulation  
+		|--> shadow CSS: è sempre scoped 
+		|--> event: Capture phase	In questa fase l’evento si propaga dalla radice del DOM verso l’elemento destinatario effettivo; facendo riferimento al nostro 							esempio, l’evento viaggia dal <body> della pagina verso il <div> mainDiv.
+			    Target phase	In questa fase l’evento raggiunge l’elemento destinatario; nel nostro caso rappresenta il momento in cui l’evento raggiunge il 							primo paragrafo.
+			    Bubble phase	Questa è la fase in cui l’evento risale l’albero del DOM partendo dall’elemento target fino a raggiungere la radice, passando 							quindi dagli stessi nodi attraversati nella fase di cattura.
+		|->slot: scrivo un componente riutilizzabile, sono dei place holder, a runtime ci mettiamo dei markup
+
+
+	- custom element: creare API e estendere il "vocabolario" gestite dal browser
+		|-->customElement.define("tag", nome, {exstend: 'p'}); implementare i "life cicle loop" per far funzionare il tutto:
+			|--> costruttore: deve eseere registrato e poi utilizzato, (dependecy injection)
+			|-->connectedCallback//disconnectedCallback
+			|-->attributeChangedComponent: cambiamenti del componente.
+
+POLYMR COME SUPPORTO DEL WEB COMPONENT
+
+sviluppata da google, gestione delle callback e gestione dei tempalet, 2 way data binding, sintassi complessa.
+tutto ciò che sta dentro a "properties" può essere modificato.
+computed binfing: funzione richiamta come observer di una property
+	observer come STATIC property.
+
+
+
+
+eventi standard o CUSTOM EVENT
+
+LIT element: una classe come polymer che stendendola ci fa creare componenti diversi
+
+
+monorepo e lerna: si ha tutto in un unico punto. per runnare tutti i componenti "distaccati" uso LERNA npm i -g lerna 
+												           lerna init 
+												           lerna boostrap 
+
+ lerna boostrap --hoist -> porta su le dipendenze comuni
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
