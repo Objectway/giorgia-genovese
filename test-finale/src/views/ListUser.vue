@@ -4,13 +4,12 @@
     <!-- <router-link to="/listUser">Lista Utenti</router-link> -->
       <list-component-vue></list-component-vue>
     </div>
-    <div class="img" v-for='itemP in newPhoto'>
-      <img src="itemP.thumbnailUrl">
-    </div>
     <div class="list" v-for='(item,index) in newLista' >
-      
+      <img class="imageList" v-if="item.id==newPhoto[index].id" v-bind:src='newPhoto[index].thumbnailUrl'>
       <list-component v-bind:name="item.username" ></list-component>
+      <div><i class="fas fa-chevron-right"></i></div>
     </div>
+    
   </div>
 </template>
 
@@ -30,29 +29,27 @@ export default class ListUser extends Vue {
   public newPhoto:string='';
   created(){
      let lista=this.$store.getters.getLista;
-     this.newLista=lista
-     console.log(this.newLista)
-      
+     this.newLista=lista;    
         this.axios.get('http://jsonplaceholder.typicode.com/photos')
         .then((response)=>{
-          this.$store.commit('setPhoto',response.data)
+          //this.$store.commit('setPhoto',response.data.thumbnailUrl)
+          this.newPhoto=response.data;
+          //console.log(this.newPhoto)
         })
 
-    let photo=this.$store.getters.getPhoto;
-    this.newPhoto=photo
-    console.log(this.newPhoto)
-  
   }
 }
 </script>
 <style scoped lang="scss">
 $color_conectus:#005dad;
+$color_grey: #ecebebcc;
+$gutter: 8px;
 .listUser{
-    //background-color: white;
+    background-color: $color_grey;
     width: 100%;
     height: 100%;
     text-decoration:none;
-    //color: white;
+    margin-bottom: $gutter;
     display:flex;
     flex-direction:column;
       a:-webkit-any-link {
@@ -60,6 +57,21 @@ $color_conectus:#005dad;
       cursor: pointer;
       text-decoration: none;
   }
-    
+  .list{
+    display: flex;
+    flex-direction: row;
+    width: 750px;
+    height: 90px;
+    align-items: center;
+    margin: auto;
+    margin-bottom: $gutter;
+    background-color:white;
+    //justify-content: space-between;
+  }
+  .imageList{
+    border-radius: 76px;
+    height: 75px;
+    margin: 0 8px 0 8px;
+  }
 }
 </style>

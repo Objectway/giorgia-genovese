@@ -75,6 +75,7 @@ $color_conectus:#005dad;
       padding: $gutter;
       padding-right: 0;
       height: $gutter*5;
+      border-style: hidden;
     }
     a{
       color:$color_conectus;
@@ -84,8 +85,8 @@ $color_conectus:#005dad;
   &__button{
     width: 650px;
     height: 56px;
-    margin-top: 16px;
-    margin-bottom: 16px;
+    margin-top: $gutter*2;
+    margin-bottom: $gutter*2;
     border: none;
     height: $gutter*5;
     background: $color_conectus;

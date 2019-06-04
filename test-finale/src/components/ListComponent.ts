@@ -3,16 +3,23 @@ import { LitElement, html, customElement, property } from 'lit-element';
 export class ListComponent extends LitElement {
   @property()
    name !: string;
-   address!:string;
   render(){
     
     return html`
+      <style>
+      p
+      {
+        margin-top: 0px;
+        position: top;
+        padding-bottom: 20px;
+      }
+      </style>
+
       <div class="Client">
-        <img src=""/>
         <div class="Client__persona">
-          <h2> ${this.name}</h2>
-          <p>${this.address}</p>
+          <p> ${this.name}</p>
         </div>
+        
       </div>
     `;
   }

@@ -1,6 +1,8 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Login from './views/Login.vue';
+import Prospect from './views/Prospect.vue'
+import PersonaFisica from './views/PersonaFisica.vue'
 import router from './router';
 import store from './store.js';
 
@@ -16,15 +18,19 @@ export default new Router({
     {
       path: '/listUser',
       name: 'listUser',
-      
+
       component: () => import( './views/ListUser.vue'),
     },
+     {
+       path: '/prospect',
+       name: 'prospect',
+       component: Prospect,
+     },
+     {
+       path: '/personafisica',
+       name: 'personafisica',
+       component: PersonaFisica,
+     },
+     
   ],
 });
-// router.beforeEach((to, from, next) => {
-//   if (to.fullPath === '/') {
-//     if ($store.getters.getAccess) {
-//       next('/newUser');
-//     }
-//   }
-// });

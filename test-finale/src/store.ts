@@ -14,7 +14,8 @@ export default new Vuex.Store({
       return state.infoLista
     },
     getPhoto: (state) => {
-      return state.infoPhoto
+      return state.infoPhoto.thumbnailUrl
+      //console.log(state.infoPhoto)
     },
   },
   mutations: {
@@ -24,7 +25,7 @@ export default new Vuex.Store({
     },
     setPhoto:(state, value)=>{
       state.infoPhoto=value;
-      console.log(state.infoPhoto)
+      //console.log(state.infoPhoto)
     }
     // setAccess:(state, value)=>{
     //   state.checkV=value;
