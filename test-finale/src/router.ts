@@ -14,10 +14,10 @@ export default new Router({
       component: Login,
     },
     {
-      path: '/newUser',
-      name: 'newUser',
+      path: '/listUser',
+      name: 'listUser',
       
-      component: () => import( './views/NewUser.vue'),
+      component: () => import( './views/ListUser.vue'),
     },
   ],
 });

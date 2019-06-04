@@ -33,7 +33,7 @@ export default class LoginComponent extends Vue {
    public checkUser(){
      let newLista=this.$store.getters.getLista;
      let chekV= false;
-     console.log(newLista)
+     //console.log(newLista)
      
      newLista.map((item, index) => {
        if(item.username==this.username){
@@ -44,7 +44,7 @@ export default class LoginComponent extends Vue {
        }
        if(this.chekV){
          console.log(chekV)
-         this.$router.push('newUser')
+         this.$router.push('listUser')
        }
      });
    }
