@@ -5,32 +5,36 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    infoLista:'',
+    infoLista:[],
     infoPhoto:'',
-    checkV:false
+    checkV:false,
+    zipcode:''
   },
   getters:{
     getLista: (state) => {
       return state.infoLista
     },
     getPhoto: (state) => {
-      return state.infoPhoto.thumbnailUrl
-      //console.log(state.infoPhoto)
+      return state.infoPhoto.thumbnailUrl;
     },
   },
   mutations: {
     setLista:(state, value)=>{
       state.infoLista=value;
-      //console.log(state.infoLista)
     },
     setPhoto:(state, value)=>{
       state.infoPhoto=value;
-      //console.log(state.infoPhoto)
+    },
+    addUser:(state,value)=>{
+      state.infoLista.push(value);
+      console.log(state.infoLista)
+    },
+    checkUser:(state,value)=>{
+      state.infoLista.map((value)=>{
+        state.zipcode=state.infolista.zipcode;
+        console.log(state.zipcode)
+      });
     }
-    // setAccess:(state, value)=>{
-    //   state.checkV=value;
-    //   //console.log(state.infoLista)
-    // }
   },
   // actions: {
 

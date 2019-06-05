@@ -23,7 +23,7 @@
           <router-view/> 
       </div>
       <div class="Prospect__typeButtom">
-          <button class="bottone">ANNULLA</button>
+          <button class="bottone" @click="backList">ANNULLA</button>
       </div>
   </div>
 </template>
@@ -33,7 +33,12 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component
 
-export default class ProspectComponent extends Vue {}
+export default class ProspectComponent extends Vue {
+
+    public backList(){
+        this.$router.push('listUser')
+    }
+}
 </script>
 
 
@@ -100,6 +105,7 @@ $color_conectus:#005dad;
             border-radius: $gutter/2;
             padding: $gutter;
             border-width: inherit;
+            color:white;
         }
     }
 }

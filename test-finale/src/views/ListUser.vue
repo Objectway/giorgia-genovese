@@ -1,7 +1,7 @@
 <template>
   <div class="listUser">
     <div class="listUser__header">
-    <!-- <router-link to="/listUser">Lista Utenti</router-link> -->
+      <header-component></header-component>
       <list-component-vue></list-component-vue>
     </div>
     <div class="list" v-for='(item,index) in newLista' >
@@ -18,10 +18,12 @@
 import { Component, Vue } from 'vue-property-decorator';
 import '@/components/ListComponent.ts'
 import ListComponentVue from '../components/ListComponentVue.vue'
+import HeaderComponent from '../components/HeaderComponent.vue'
 
 @Component({
   components:{
-    ListComponentVue
+    ListComponentVue,
+    HeaderComponent
   }
 })
 export default class ListUser extends Vue {
@@ -34,9 +36,7 @@ export default class ListUser extends Vue {
         .then((response)=>{
           //this.$store.commit('setPhoto',response.data.thumbnailUrl)
           this.newPhoto=response.data;
-          //console.log(this.newPhoto)
         })
-
   }
 }
 </script>
@@ -66,7 +66,6 @@ $gutter: 8px;
     margin: auto;
     margin-bottom: $gutter;
     background-color:white;
-    //justify-content: space-between;
   }
   .imageList{
     border-radius: 76px;

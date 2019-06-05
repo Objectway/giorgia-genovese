@@ -8,7 +8,7 @@
       <p class="Login__label">PASSWORD</p>
       <input type="password" v-model="password" placeholder="password"> 
       <button class="Login__button" @click="checkUser">ACCEDI</button> 
-      <a href="#">Recupera Password</a>
+      <a @click="getPassword">Recupera Password</a>
     </div>
   </div>
 </template>
@@ -30,10 +30,12 @@ export default class LoginComponent extends Vue {
         this.$store.commit('setLista',response.data)
       })
   }
+  public getPassword(){
+    this.$router.push('getpassword')
+  }
    public checkUser(){
      let newLista=this.$store.getters.getLista;
      let chekV= false;
-     //console.log(newLista)
      
      newLista.map((item, index) => {
        if(item.username==this.username){

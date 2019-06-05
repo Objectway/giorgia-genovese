@@ -1,36 +1,25 @@
 <template>
     <div class="List">
-        <div class="List__header">
-            <div class="menu">
-                <i class="fas fa-bars"></i>
-                <p> CONECTUS </p>
-            </div>
-            <div class="bell">
-                <router-link class="routerBack" to="/prospect">Go Back To The Prospect</router-link> 
-                <router-view/> 
-                <i class="fas fa-bell"></i>
-            </div>
-        </div>
-    <persona-fisica-component></persona-fisica-component>
+        <header-component></header-component>
+        <persona-fisica-component></persona-fisica-component>
+        <!-- <footer-component></footer-component> -->
     </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import PersonaFisicaComponent from '@/components/PersonaFisicaComponent.vue'; // @ is an alias to /src
+import PersonaFisicaComponent from '@/components/PersonaFisicaComponent.vue'; 
+import HeaderComponent from '../components/HeaderComponent.vue';
+// import FooterComponent from '../components/FooterComponent.vue'
 
 @Component({
   components: {
     PersonaFisicaComponent,
+    HeaderComponent,
+    // FooterComponent
   },
 })
-export default class PersonaFisica extends Vue {
-  // public infoLista{
-  //   username: string='',
-  //   password: string=''
-  // } ;
-  
-}
+export default class PersonaFisica extends Vue {}
 </script>
 <style scoped lang="scss">
 $gutter: 8px;

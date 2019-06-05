@@ -1,30 +1,19 @@
 <template>
     <div class="List">
-        <div class="List__header">
-            <div class="menu">
-                <i class="fas fa-bars"></i>
-                <p> CONECTUS </p>
-            </div>
-            <div class="bell">
-                <router-link class="routerBack" to="/listUser">Go Back To The List</router-link> 
-                <router-view/> 
-                <i class="fas fa-bell"></i>
-            </div>
-        </div>
-    <prospect-component></prospect-component>
+        <header-component></header-component>
+        <prospect-component></prospect-component>
     </div>
-    <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
-    
-  
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import ProspectComponent from '@/components/ProspectComponent.vue'; // @ is an alias to /src
+import HeaderComponent from '../components/HeaderComponent.vue'
 
 @Component({
   components: {
     ProspectComponent,
+    HeaderComponent
   },
 })
 export default class Prospect extends Vue {

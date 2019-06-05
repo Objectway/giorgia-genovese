@@ -3,6 +3,7 @@ import Router from 'vue-router';
 import Login from './views/Login.vue';
 import Prospect from './views/Prospect.vue'
 import PersonaFisica from './views/PersonaFisica.vue'
+import GetPassword from './views/GetPassword.vue'
 import router from './router';
 import store from './store.js';
 
@@ -18,7 +19,6 @@ export default new Router({
     {
       path: '/listUser',
       name: 'listUser',
-
       component: () => import( './views/ListUser.vue'),
     },
      {
@@ -30,6 +30,11 @@ export default new Router({
        path: '/personafisica',
        name: 'personafisica',
        component: PersonaFisica,
+     },
+     {
+       path: '/getpassword',
+       name: 'getpassword',
+       component: GetPassword,
      },
      
   ],
