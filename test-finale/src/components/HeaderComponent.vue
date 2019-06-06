@@ -6,8 +6,6 @@
         </div>
         <div class="bell">
             <i class="fas fa-bell"></i>
-             <!-- <router-link class="routerBack" to="/">Go Back To Login</router-link> 
-            <router-view/>  -->
         </div>
     </div>
 </template>
@@ -18,6 +16,7 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 @Component
 
 export default class HeaderComponent extends Vue {} 
+
 </script>
 
 <style scoped lang="scss">

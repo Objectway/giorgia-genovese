@@ -30,9 +30,11 @@ export default class LoginComponent extends Vue {
         this.$store.commit('setLista',response.data)
       })
   }
+
   public getPassword(){
     this.$router.push('getpassword')
   }
+
    public checkUser(){
      let newLista=this.$store.getters.getLista;
      let chekV= false;
@@ -40,59 +42,59 @@ export default class LoginComponent extends Vue {
      newLista.map((item, index) => {
        if(item.username==this.username){
          if(item.address.zipcode==this.password){
-           console.log(true)
            this.chekV=true;
          }
        }
        if(this.chekV){
-         console.log(chekV)
          this.$router.push('listUser')
        }
      });
    }
 } 
+
 </script>
 
 <style scoped lang="scss">
 $gutter: 8px;
 $color_conectus:#005dad;
-.Login{
-  font-size: $gutter*2;
-  width: 650px;
-  display: flex;
-  flex-direction: column;
-  align-items: baseline;
-  &__lorem{
-    margin-top: 0px;
-    margin-bottom: $gutter*6;
-    color: #727f8c;
-  }
-  &__label{
-    font-weight: bold;
-  }
-  &__form{
+  .Login{
+    font-size: $gutter*2;
     width: 650px;
-    input{
-      width: 642px;
-      padding: $gutter;
-      padding-right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    &__lorem{
+      margin-top: 0px;
+      margin-bottom: $gutter*6;
+      color: #727f8c;
+    }
+    &__label{
+      font-weight: bold;
+    }
+    &__form{
+      width: 650px;
+      input{
+        width: 642px;
+        padding: $gutter;
+        padding-right: 0;
+        height: $gutter*5;
+        border-style: hidden;
+      }
+      a{
+        color:$color_conectus;
+        text-decoration: none;
+      }
+    }
+    &__button{
+      width: 650px;
+      height: 56px;
+      margin-top: $gutter*2;
+      margin-bottom: $gutter*2;
+      border: none;
       height: $gutter*5;
-      border-style: hidden;
-    }
-    a{
-      color:$color_conectus;
-      text-decoration: none;
+      background: $color_conectus;
+      color:white;
     }
   }
-  &__button{
-    width: 650px;
-    height: 56px;
-    margin-top: $gutter*2;
-    margin-bottom: $gutter*2;
-    border: none;
-    height: $gutter*5;
-    background: $color_conectus;
-    color:white;
-  }
-}
+  
 </style>

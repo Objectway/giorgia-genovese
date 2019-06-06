@@ -6,6 +6,7 @@
 </template>
 
 <script lang="ts">
+
 import { Component, Vue } from 'vue-property-decorator';
 import ProspectComponent from '@/components/ProspectComponent.vue'; // @ is an alias to /src
 import HeaderComponent from '../components/HeaderComponent.vue'
@@ -16,13 +17,9 @@ import HeaderComponent from '../components/HeaderComponent.vue'
     HeaderComponent
   },
 })
-export default class Prospect extends Vue {
-  // public infoLista{
-  //   username: string='',
-  //   password: string=''
-  // } ;
-  
-}
+
+export default class Prospect extends Vue {}
+
 </script>
 <style scoped lang="scss">
 $gutter: 8px;
@@ -50,7 +47,7 @@ $color_conectus:#005dad;
             margin: $gutter;
         }
     }
-      a:-webkit-any-link {
+    a:-webkit-any-link {
       color: white;
       cursor: pointer;
       text-decoration: none;

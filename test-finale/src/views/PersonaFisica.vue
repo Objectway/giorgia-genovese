@@ -19,8 +19,11 @@ import HeaderComponent from '../components/HeaderComponent.vue';
     // FooterComponent
   },
 })
+
 export default class PersonaFisica extends Vue {}
+
 </script>
+
 <style scoped lang="scss">
 $gutter: 8px;
 $color_conectus:#005dad;

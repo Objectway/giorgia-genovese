@@ -1,11 +1,12 @@
 <template>
     <div class="Prospect__typeButtom">
-          <button class="bottone">ANNULLA</button>
-          <button class="Agree__button" @click="addUser">AVANTI</button> 
+        <button class="bottone">ANNULLA</button>
+        <button class="Agree__button" @click="addUser">AVANTI</button> 
       </div>
 </template>
 
 <script lang="ts">
+
 import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component
@@ -27,7 +28,6 @@ $color_conectus:#005dad;
         padding: $gutter*2;
         border-radius: $gutter/2;
         justify-content: space-between;
-        
         .bottone{
             background-color:#d4cececc;
             border-radius: $gutter/2;

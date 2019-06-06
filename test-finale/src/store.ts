@@ -8,7 +8,8 @@ export default new Vuex.Store({
     infoLista:[],
     infoPhoto:'',
     checkV:false,
-    zipcode:''
+    zipcode:'',
+    consenso:false
   },
   getters:{
     getLista: (state) => {
@@ -17,6 +18,9 @@ export default new Vuex.Store({
     getPhoto: (state) => {
       return state.infoPhoto.thumbnailUrl;
     },
+    getAdd:(state)=>{
+      return state.consenso;
+    }
   },
   mutations: {
     setLista:(state, value)=>{
@@ -27,13 +31,9 @@ export default new Vuex.Store({
     },
     addUser:(state,value)=>{
       state.infoLista.push(value);
-      console.log(state.infoLista)
     },
-    checkUser:(state,value)=>{
-      state.infoLista.map((value)=>{
-        state.zipcode=state.infolista.zipcode;
-        console.log(state.zipcode)
-      });
+    setAdd:(state,value)=>{
+      state.consenso=value;
     }
   },
   // actions: {

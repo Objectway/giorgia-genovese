@@ -5,6 +5,7 @@
 </template>
 
 <script lang="ts">
+
 import { Component, Vue } from 'vue-property-decorator';
 import LoginComponent from '@/components/LoginComponent.vue'; 
 
@@ -13,5 +14,7 @@ import LoginComponent from '@/components/LoginComponent.vue';
     LoginComponent,
   },
 })
+
 export default class Login extends Vue {}
+
 </script>

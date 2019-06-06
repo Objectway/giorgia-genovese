@@ -6,6 +6,7 @@
 </template>
 
 <script lang="ts">
+
 import { Component, Vue } from 'vue-property-decorator';
 import LoginComponent from '@/components/LoginComponent.vue'; 
 import GetPasswordComponent from '../components/GetPasswordComponent.vue';
@@ -18,7 +19,9 @@ import HeaderComponent from '../components/HeaderComponent.vue'
     HeaderComponent
   },
 })
+
 export default class GetPassword extends Vue {}
+
 </script>
 
 <style scoped lang="scss">

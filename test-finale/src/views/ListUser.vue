@@ -5,11 +5,14 @@
       <list-component-vue></list-component-vue>
     </div>
     <div class="list" v-for='(item,index) in newLista' >
-      <img class="imageList" v-if="item.id==newPhoto[index].id" v-bind:src='newPhoto[index].thumbnailUrl'>
-      <list-component v-bind:name="item.username" ></list-component>
-      <div><i class="fas fa-chevron-right"></i></div>
+      <div class="list__Credential">
+        <img class="imageList" v-if="item.id==newPhoto[index].id" v-bind:src='newPhoto[index].thumbnailUrl'>
+        <list-component v-bind:name="item.username"></list-component>
+      </div>
+      <div>
+        <i class="fas fa-chevron-right"></i>
+      </div> 
     </div>
-    
   </div>
 </template>
 
@@ -26,24 +29,31 @@ import HeaderComponent from '../components/HeaderComponent.vue'
     HeaderComponent
   }
 })
+
 export default class ListUser extends Vue {
+
   public newLista:string='';
   public newPhoto:string='';
+
   created(){
      let lista=this.$store.getters.getLista;
      this.newLista=lista;    
-        this.axios.get('http://jsonplaceholder.typicode.com/photos')
+     this.axios.get('http://jsonplaceholder.typicode.com/photos')
         .then((response)=>{
-          //this.$store.commit('setPhoto',response.data.thumbnailUrl)
           this.newPhoto=response.data;
         })
   }
 }
+
 </script>
 <style scoped lang="scss">
+
 $color_conectus:#005dad;
 $color_grey: #ecebebcc;
 $gutter: 8px;
+i{
+  margin: $gutter*2;
+  }
 .listUser{
     background-color: $color_grey;
     width: 100%;
@@ -66,11 +76,17 @@ $gutter: 8px;
     margin: auto;
     margin-bottom: $gutter;
     background-color:white;
+    justify-content: space-between;
+      &__Credential{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
   }
   .imageList{
     border-radius: 76px;
     height: 75px;
-    margin: 0 8px 0 8px;
+    margin: 0 $gutter 0 $gutter;
   }
 }
 </style>

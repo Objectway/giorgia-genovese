@@ -2,7 +2,7 @@
   <div class="Prospect">
       <div class="Prospect__list">
           <h1>Crea Un Nuovo Prospect</h1>
-          <p>Inserisci i dati anagrafici della persona fisica </p>
+          <p class="P__grey">Inserisci i dati anagrafici della persona fisica </p>
       </div>
       <div class="Prospect__type">
           <div class="Prospect__typeBox">
@@ -34,7 +34,7 @@
                     <label for="checkbox">Persona con disabilità </label>
                 </div>
                 <p>Informatica ai sensi del decreto</p>
-                <p>Il cliente dichiara di aver preso atto di quanto indicato nell'informativa 
+                <p class="P__grey">Il cliente dichiara di aver preso atto di quanto indicato nell'informativa 
                 consegnatagli in data odierna e consapevole dei diritti previsti dal decreto 
                 legislaativo n.196 del 30/06/2003, presta il suo consenso.</p>
                 <div class="Prospect__checkBox">
@@ -46,6 +46,9 @@
                         <input type="radio" name="radiocheck" id="checkbox1" v-model="checked" v-bind:value="false">
                         <label for="checkbox1">Nego il consenso</label>
                     </div>
+                </div>
+                <div v-if="this.consenso==false">
+                        <p class="Div__alert"> Prima di procedere con l'inserimento dei il consenso </p>
                 </div>
           </div>
       </div>
@@ -67,26 +70,32 @@ export default class ProspectComponent extends Vue {
     public cognome:string= '';
     public codicefiscale:string='';
     public disableCheck: boolean=false;
-    public checked: boolean=false;
+    public checked: boolean=null;
+    public consenso: boolean=null;
 
     public addUser(){
-        console.log(this.checked)
-        if(this.checked==true && this.username!='' && this.cognome!='' && this.codicefiscale!=''){
-        //let lista=this.$store.getters.getLista;
-            let User={
-                username:this.username,
-                cognome:this.cognome,
-                codicefiscale:this.codicefiscale,
-                disableCheck:this.disableCheck
-            }
-            //console.log(User)
-            this.$store.commit('addUser',User)
-            this.$router.push('listUser')
+        const regex= /^(?:(?:[B-DF-HJ-NP-TV-Z]|[AEIOU])[AEIOU][AEIOUX]|[B-DF-HJ-NP-TV-Z]{2}[A-Z]){2}[\dLMNP-V]{2}(?:[A-EHLMPR-T](?:[04LQ][1-9MNP-V]|[1256LMRS][\dLMNP-V])|[DHPS][37PT][0L]|[ACELMRT][37PT][01LM])(?:[A-MZ][1-9MNP-V][\dLMNP-V]{2}|[A-M][0L](?:[1-9MNP-V][\dLMNP-V]|[0L][1-9MNP-V]))[A-Z]$/i;
+        if(this.checked==true && this.username!='' && this.cognome!='' && regex.exec(this.codicefiscale)){
+            this.consenso=true;
+                let User={
+                    username:this.username,
+                    cognome:this.cognome,
+                    codicefiscale:this.codicefiscale,
+                    disableCheck:this.disableCheck
+                }
+            this.$store.commit('addUser',User);
+            this.$store.commit('setAdd',this.consenso);
+            let newConsenso=this.$store.getters.getAdd;
+            this.consenso=newConsenso;
+            this.$router.push('listUser');
         }
+        this.consenso=false;
     }
+
     public backProspect(){
         this.$router.push('prospect')
     }
+    
 }
 </script>
 
@@ -94,8 +103,14 @@ export default class ProspectComponent extends Vue {
 $gutter: 8px;
 $color_grey: #ecebebcc;
 $color_conectus:#005dad;
+a:-webkit-any-link {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
 #uppercaseTo{
     text-transform: uppercase;
+    margin: 0 ;
 }
 .Prospect{
     background-color: $color_grey;
@@ -106,9 +121,12 @@ $color_conectus:#005dad;
     display:flex;
     flex-direction:column;
     justify-content: space-between;
-    p{
+    .P__grey{
         color:#727f8c;
-        
+        font-weight: 100;
+    }
+    p{
+        font-weight: bold;
     }
     &__list{
         display: flex;
@@ -138,6 +156,7 @@ $color_conectus:#005dad;
             border-radius: $gutter/2;
             img{
                 width: 140px;
+                margin-top: 16px;
             }
         }
     }
@@ -158,12 +177,9 @@ $color_conectus:#005dad;
         background-color: white;
         width: 150%;
         border-radius: $gutter/2;
-        
-        p{
-            //margin-left: $gutter*3;
-        }
         input{
             padding: $gutter;
+            margin: 0 8px 0 0;
         }
     }
     &__checkBox{
@@ -176,16 +192,14 @@ $color_conectus:#005dad;
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
-        
-    .Form{
-        margin-right: auto;
-        
-    }
+        .Form{
+            margin-right: auto;
+        }
     }
     &__typeButtom{
         display: flex;
         flex-direction: row;
-        width: 750px;
+        width: 720px;
         margin : auto;
         background-color:white;
         margin-top: $gutter*2;
@@ -193,7 +207,6 @@ $color_conectus:#005dad;
         padding: $gutter*2;
         border-radius: $gutter/2;
         justify-content: space-between;
-        
         .bottone{
             background-color:#d4cececc;
             border-radius: $gutter/2;

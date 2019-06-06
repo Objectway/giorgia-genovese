@@ -13,7 +13,7 @@
                     <p>Persona fisica</p>
                 </div>
               </router-link> 
-              <router-link class="routerBack" to="/">
+              <router-link class="routerBack" to="/prospect">
                 <div class="Type__boxElement">
                     <img src="../assets/parthenon.png"> 
                     <p>Persona giuridica</p>
@@ -38,6 +38,7 @@ export default class ProspectComponent extends Vue {
     public backList(){
         this.$router.push('listUser')
     }
+    
 }
 </script>
 
@@ -46,6 +47,11 @@ export default class ProspectComponent extends Vue {
 $gutter: 8px;
 $color_grey: #ecebebcc;
 $color_conectus:#005dad;
+a:-webkit-any-link {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
 .Prospect{
     background-color: $color_grey;
     width: 100%;
@@ -87,13 +93,14 @@ $color_conectus:#005dad;
             border-radius: $gutter/2;
             img{
                 width: 140px;
+                margin-top: 16px;
             }
         }
     }
     &__typeButtom{
-         display: flex;
+        display: flex;
         flex-direction: row;
-        width: 750px;
+        width: 720px;
         margin : auto;
         background-color:white;
         margin-top: $gutter*2;
