@@ -5,7 +5,7 @@ import Prospect from './views/Prospect.vue'
 import PersonaFisica from './views/PersonaFisica.vue'
 import GetPassword from './views/GetPassword.vue'
 import router from './router';
-import store from './store.js';
+import store from './store';
 
 Vue.use(Router);
 
@@ -20,6 +20,11 @@ export default new Router({
       path: '/listUser',
       name: 'listUser',
       component: () => import( './views/ListUser.vue'),
+      beforeEnter:(to, from, next)=>{
+        to: '/listUser';
+        from:'/login';
+        next(store.getters.getCheck)
+      }
     },
      {
        path: '/prospect',

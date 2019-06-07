@@ -73,6 +73,15 @@ export default class ProspectComponent extends Vue {
     public checked: boolean=null;
     public consenso: boolean=null;
 
+    /** addUser() è un metodo che aggiunge un nuovo utente alla lista.
+     * la regex controlla che il codice fiscale inserito sia valido,
+     * controlla anche che il nome, cognome e mail non siano vuote e
+     * che il consenso sia stato dato. Quando si da il consenso si
+     * cambia il valore alla variabile consenso e si aggiorna anchr
+     * quella nello store.ts così da poter poi anche visualizzare il
+     * popUp nella lista.
+     */
+
     public addUser(){
         const regex= /^(?:(?:[B-DF-HJ-NP-TV-Z]|[AEIOU])[AEIOU][AEIOUX]|[B-DF-HJ-NP-TV-Z]{2}[A-Z]){2}[\dLMNP-V]{2}(?:[A-EHLMPR-T](?:[04LQ][1-9MNP-V]|[1256LMRS][\dLMNP-V])|[DHPS][37PT][0L]|[ACELMRT][37PT][01LM])(?:[A-MZ][1-9MNP-V][\dLMNP-V]{2}|[A-M][0L](?:[1-9MNP-V][\dLMNP-V]|[0L][1-9MNP-V]))[A-Z]$/i;
         if(this.checked==true && this.username!='' && this.cognome!='' && regex.exec(this.codicefiscale)){

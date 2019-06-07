@@ -29,12 +29,18 @@ export default class GetPasswordComponent extends Vue {
     public zipcode:string='';
     public checkV:boolean= false;
 
-    created(){
-      this.axios.get('http://jsonplaceholder.typicode.com/users')
-      .then((response)=>{
-        this.$store.commit('setLista',response.data)
-      })
-    }
+    // created(){
+    //   this.axios.get('http://jsonplaceholder.typicode.com/users')
+    //   .then((response)=>{
+    //     this.$store.commit('setLista',response.data)
+    //   })
+    // }
+
+    /** checkUser() è un metodo che con il getters presente nello store.ts
+     * si scarica la lista degli utenti e controlla che l'username e la email
+     * siano presenti nella lista. Se si verifica la condizione il metodo
+     * restituisce la password dell'utente.
+     */
 
     public checkUser(){
         let newLista=this.$store.getters.getLista;
@@ -48,6 +54,10 @@ export default class GetPasswordComponent extends Vue {
             }
         });
     }
+
+    /** backLogin() è un metodo che grazie alle rotte ti reindirizza
+     * nella pagina di login.
+     */
 
     public backLogin(){
         this.$router.push('/')

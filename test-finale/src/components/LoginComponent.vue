@@ -24,6 +24,13 @@ export default class LoginComponent extends Vue {
   public username: string='';
   public password: string='';
 
+
+  /** Nel created() mi scarico la lista degli utenti. 
+   * setLista è un metodo presente nello store.ts che salva qua 
+   * per la prima volta la lista e poi quandoviene 
+   * richiamato aggiorna la variabile nello store.ts.
+   */
+
   created(){
       this.axios.get('http://jsonplaceholder.typicode.com/users')
       .then((response)=>{
@@ -31,21 +38,33 @@ export default class LoginComponent extends Vue {
       })
   }
 
+  /** getPassword() utilizza le rotte per reindirizzarti alla 
+   * pagina del recuper password.
+   */
+
   public getPassword(){
     this.$router.push('getpassword')
   }
 
+  /** checkUser() è un metodo che controlla se ò'utente inserito nel form sia 
+   * effettivamente presente nella lista settando la variabile checkV=true.
+   * In fine si viene reindirizzati nella pagina della visualizzazione
+   * della lista degli utenti.
+   */
+
+
    public checkUser(){
      let newLista=this.$store.getters.getLista;
-     let chekV= false;
+     let checkV= false;
      
      newLista.map((item, index) => {
        if(item.username==this.username){
          if(item.address.zipcode==this.password){
-           this.chekV=true;
+           checkV=true;
+           this.$store.commit('setCheck',checkV)
          }
        }
-       if(this.chekV){
+       if(checkV){
          this.$router.push('listUser')
        }
      });

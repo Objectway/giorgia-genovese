@@ -19,6 +19,12 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 export default class ListComponentVue extends Vue {
 
   public consenso:boolean=false;
+
+  /** il created() prende la variabile consenso dallo store 
+   * che indica che un nuovo utente è stato aggiunto e nella
+   * lista degli utenti fa visualizzare un popUp temporaneo di
+   * avvenuto inserimento
+   */
   
     created(){
       let newConsenso=this.$store.getters.getAdd;

@@ -19,7 +19,7 @@ export class ListComponent extends LitElement {
 
       <div class="Client">
         <div class="Client__persona">
-          <p> ${this.name}</p>
+          <p id="nomePersona"> ${this.name}</p>
         </div>
       </div>
     `;
