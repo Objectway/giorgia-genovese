@@ -39,13 +39,6 @@ export default class ListUser extends Vue {
    * e con la chiamata di axios scarico per la prima volta la lista
    * delle foto associate agli user.
    */
-// beforeCreate(){
-//   this.axios.get('http://jsonplaceholder.typicode.com/photos')
-//         .then((response)=>{
-//           this.newPhoto=response.data;
-          
-//         })
-// }
 
   created(){
     
