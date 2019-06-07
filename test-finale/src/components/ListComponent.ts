@@ -18,7 +18,7 @@ export class ListComponent extends LitElement {
         immagine=element.thumbnailUrl;
       }
     });
-    
+
     return html`
       <style>
       .Client{
@@ -45,7 +45,6 @@ export class ListComponent extends LitElement {
       .Client__personaName
       {
         margin-top: 0px;
-        position: top;
         padding-bottom: 20px;
       }
       .Client__personaWrap{
