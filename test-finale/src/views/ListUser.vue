@@ -5,14 +5,12 @@
       <list-component-vue></list-component-vue>
       <input type="text" v-model="search" v-on:keyup="filteredList" placeholder="Cerca Utente"/>
     </div>
-    <div class="list" v-for='(item,index) in newLista' v-bind:key="item.id" >
+    <div class="list"  >
       <div class="list__Credential">
-        <img class="imageList" v-if="item.id==newPhoto[index].id" v-bind:src='newPhoto[index].thumbnailUrl'>
-        <list-component v-bind:name="item.username"></list-component>
+        <!-- <img class="imageList" v-if="item.id==newPhoto[index].id" v-bind:src='newPhoto[index].thumbnailUrl'> -->
+        <list-component v-for='(item,index) in newLista' v-bind:key="item.id" :object="JSON.stringify({user:item, photos:newPhoto})"></list-component>
       </div>
-      <div>
-        <i class="fas fa-chevron-right"></i>
-      </div> 
+      
     </div>
   </div>
 </template>
@@ -29,29 +27,32 @@ import HeaderComponent from '../components/HeaderComponent.vue'
     ListComponentVue,
     HeaderComponent
   }
-})
+}) 
 
 export default class ListUser extends Vue {
 
   public newLista:any[]=[];
-  public newPhoto:string='';
+  public newPhoto:any[]=[];
   public search:string='';
 
   /** Nel created() mi scarico la lista degli utenti dallo store.ts
    * e con la chiamata di axios scarico per la prima volta la lista
    * delle foto associate agli user.
    */
+// beforeCreate(){
+//   this.axios.get('http://jsonplaceholder.typicode.com/photos')
+//         .then((response)=>{
+//           this.newPhoto=response.data;
+          
+//         })
+// }
 
   created(){
-    debugger
+    
      let lista=this.$store.getters.getLista;
-     this.newLista=lista;  
-     console.log(this.newLista)  
-     this.axios.get('http://jsonplaceholder.typicode.com/photos')
-        .then((response)=>{
-          this.newPhoto=response.data;
-          console.log(this.newPhoto)
-        })
+     this.newLista=lista;   
+     let photo=this.$store.getters.getPhoto;
+     this.newPhoto=photo;
   }
 
   /** filteredList() è un metodo che filtra la lista presa dallo store.ts
@@ -60,12 +61,12 @@ export default class ListUser extends Vue {
    */
 
   filteredList() {
-        if(this.search!=''){
-          this.newLista=this.newLista.filter(post => {
-          return post.username.toLowerCase().includes(this.search.toLowerCase())
-        })
-        }else{
-          this.newLista=this.$store.getters.getLista;
+    if(this.search!=''){
+      this.newLista=this.newLista.filter(post => {
+      return post.username.toLowerCase().includes(this.search.toLowerCase())
+    })
+    }else{
+      this.newLista=this.$store.getters.getLista;
     }
   }
     // filteredList(){
@@ -98,22 +99,7 @@ i{
       cursor: pointer;
       text-decoration: none;
     }
-  .list{
-    display: flex;
-    flex-direction: row;
-    width: 750px;
-    height: 90px;
-    align-items: center;
-    margin: auto;
-    margin-bottom: $gutter;
-    background-color:white;
-    justify-content: space-between;
-      &__Credential{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-      }
-  }
+  
   .imageList{
     border-radius: 76px;
     height: 75px;

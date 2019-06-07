@@ -6,7 +6,7 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     infoLista:[],
-    infoPhoto:'',
+    infoPhoto:[],
     checkV:false,
     zipcode:'',
     consenso:false
@@ -16,7 +16,7 @@ export default new Vuex.Store({
       return state.infoLista
     },
     getPhoto: (state) => {
-      return state.infoPhoto.thumbnailUrl;
+      return state.infoPhoto;
     },
     getAdd:(state)=>{
       return state.consenso;

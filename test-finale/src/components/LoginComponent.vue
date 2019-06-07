@@ -23,6 +23,7 @@ export default class LoginComponent extends Vue {
 
   public username: string='';
   public password: string='';
+  public newPhoto:any[]=[];
 
 
   /** Nel created() mi scarico la lista degli utenti. 
@@ -36,6 +37,11 @@ export default class LoginComponent extends Vue {
       .then((response)=>{
         this.$store.commit('setLista',response.data)
       })
+      this.axios.get('http://jsonplaceholder.typicode.com/photos')
+        .then((response)=>{
+          console.log(response.data)
+          this.$store.commit('setPhoto',response.data)
+        })
   }
 
   /** getPassword() utilizza le rotte per reindirizzarti alla 
